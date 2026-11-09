@@ -1,0 +1,1663 @@
+/* ========================================
+   CONFIGURACIÓN GENERAL
+======================================== */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ========================================
+   BIENVENIDA Y LOGIN
+======================================== */
+
+.contenedor {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f5f7;
+  padding: 20px;
+}
+
+.bienvenida {
+  background: white;
+  padding: 45px;
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  max-width: 550px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.bienvenida h1 {
+  color: #234e52;
+  margin-bottom: 10px;
+}
+
+.bienvenida h2 {
+  color: #508b8b;
+}
+
+.bienvenida p {
+  color: #555;
+  line-height: 1.7;
+  margin: 25px 0;
+}
+
+.bienvenida button {
+  background: #287b78;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.bienvenida button:hover {
+  background: #1d605d;
+}
+
+/* ========================================
+   FORMULARIO DE LOGIN
+======================================== */
+
+.formulario-login {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.formulario-login label {
+  color: #234e52;
+  font-weight: bold;
+}
+
+.formulario-login input,
+.formulario-login textarea,
+.formulario-login select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  color: #333;
+}
+
+.formulario-login input:focus,
+.formulario-login textarea:focus,
+.formulario-login select:focus {
+  outline: 2px solid #287b78;
+  border-color: #287b78;
+}
+
+.formulario-login button {
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* ========================================
+   PANEL DE ADMINISTRACIÓN
+   Colores basados en el mockup
+======================================== */
+
+.panel-admin {
+  display: flex;
+  min-height: 100vh;
+  background: #f5efe5;
+  color: #392a23;
+}
+
+/* MENÚ LATERAL */
+
+.menu-lateral {
+  width: 245px;
+  flex-shrink: 0;
+  background: #493126;
+  color: #fffaf4;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.marca-muebleria {
+  padding: 5px 10px 20px;
+  border-bottom: 1px solid #705347;
+}
+
+.marca-muebleria h2 {
+  font-size: 17px;
+  line-height: 1.4;
+  color: #ffffff;
+  margin: 0 0 8px;
+}
+
+.marca-muebleria p {
+  color: #e2cbb8;
+  font-size: 13px;
+  margin: 0;
+}
+
+.navegacion-admin {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.boton-menu {
+  width: 100%;
+  padding: 13px 15px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  color: #fffaf4;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.boton-menu:hover {
+  background: #644638;
+}
+
+.boton-menu.activo {
+  background: #f5efe5;
+  color: #493126;
+  font-weight: bold;
+}
+
+.boton-cerrar {
+  margin-top: auto;
+  background: transparent;
+  color: #fffaf4;
+  border: 1px solid #886958;
+  border-radius: 8px;
+  padding: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.boton-cerrar:hover {
+  background: #644638;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido-admin {
+  flex: 1;
+  min-width: 0;
+  padding: 35px;
+}
+
+.encabezado-admin {
+  margin-bottom: 30px;
+}
+
+.etiqueta-sistema {
+  color: #a56d46;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.encabezado-admin h1 {
+  color: #392a23;
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+.encabezado-admin p {
+  color: #8c7b6d;
+  margin: 0;
+}
+
+/* TARJETAS Y SECCIONES */
+
+.tarjeta-admin {
+  background: white;
+  border: 1px solid #e8ded2;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.tarjeta-admin h2,
+.tarjeta-admin h3 {
+  color: #392a23;
+}
+
+/* ========================================
+   INVENTARIO DE MATERIALES
+======================================== */
+
+.seccion-materiales {
+  width: 100%;
+  text-align: left;
+}
+
+.seccion-materiales h2 {
+  font-size: 26px;
+  color: #392a23;
+  margin-bottom: 10px;
+}
+
+.seccion-materiales h3 {
+  color: #493126;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.seccion-materiales p {
+  color: #8c7b6d;
+  line-height: 1.6;
+}
+
+/* Formulario de materiales */
+
+.seccion-materiales .formulario-login {
+  background: #ffffff;
+  padding: 25px;
+  border: 1px solid #e8ded2;
+  border-radius: 12px;
+  max-width: 750px;
+}
+
+.seccion-materiales .formulario-login label {
+  color: #493126;
+}
+
+.seccion-materiales .formulario-login input,
+.seccion-materiales .formulario-login textarea,
+.seccion-materiales .formulario-login select {
+  border: 1px solid #ded6ce;
+  background: white;
+  color: #392a23;
+}
+
+.seccion-materiales .formulario-login input:focus,
+.seccion-materiales .formulario-login textarea:focus,
+.seccion-materiales .formulario-login select:focus {
+  outline: 2px solid #79523c;
+  border-color: #79523c;
+}
+
+.seccion-materiales .formulario-login button {
+  background: #704b38;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.seccion-materiales .formulario-login button:hover {
+  background: #593a2b;
+}
+
+/* TABLA DE INVENTARIO */
+
+.seccion-materiales table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 14px;
+}
+
+.seccion-materiales th {
+  background: #eee4d7;
+  color: #493126;
+  padding: 15px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.seccion-materiales td {
+  padding: 15px;
+  border-bottom: 1px solid #eee7df;
+  color: #392a23;
+}
+
+.seccion-materiales tbody tr:hover {
+  background: #faf6f0;
+}
+
+/* ========================================
+   DISEÑO RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .menu-lateral {
+    width: 200px;
+  }
+
+  .contenido-admin {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 650px) {
+  .panel-admin {
+    flex-direction: column;
+  }
+
+  .menu-lateral {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .marca-muebleria {
+    padding-bottom: 12px;
+  }
+
+  .navegacion-admin {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .boton-menu {
+    white-space: nowrap;
+    width: auto;
+  }
+
+  .boton-cerrar {
+    margin-top: 0;
+  }
+
+  .contenido-admin {
+    padding: 20px 15px;
+  }
+
+  .encabezado-admin h1 {
+    font-size: 24px;
+  }
+
+  .tarjeta-admin {
+    padding: 18px;
+  }
+
+  .bienvenida {
+    padding: 25px;
+  }
+
+  .seccion-materiales .formulario-login {
+    padding: 18px;
+  }
+}
+
+
+/* Tarjetas del resumen de inventario */
+
+.resumen-inventario {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.resumen-inventario .tarjeta-admin {
+  margin-bottom: 0;
+}
+
+.resumen-inventario .tarjeta-admin h3 {
+  font-size: 14px;
+  color: #8c7b6d;
+  font-weight: normal;
+  margin: 0 0 15px;
+}
+
+.resumen-inventario .tarjeta-admin h2 {
+  font-size: 32px;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .resumen-inventario {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========================================
+   INVENTARIO - DISEÑO DEL MOCKUP
+======================================== */
+
+.encabezado-inventario {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.encabezado-inventario h2 {
+  margin: 0 0 8px;
+}
+
+.encabezado-inventario p {
+  margin: 0;
+}
+
+.boton-registrar-material {
+  background: #704b38;
+  color: white;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.boton-registrar-material:hover {
+  background: #593a2b;
+}
+
+/* Barra de búsqueda */
+
+.barra-inventario {
+  background: white;
+  padding: 15px;
+  border: 1px solid #e8ded2;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.barra-inventario input {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border: 1px solid #ded6ce;
+  border-radius: 7px;
+  font-size: 14px;
+  background: white;
+  color: #392a23;
+}
+
+/* Tabla */
+
+.tabla-inventario {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e8ded2;
+  border-radius: 10px;
+  background: white;
+}
+
+.tabla-inventario table {
+  min-width: 750px;
+}
+
+.estado-stock {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.estado-stock.suficiente {
+  background: #dcebdd;
+  color: #356746;
+}
+
+.estado-stock.bajo {
+  background: #f7ded6;
+  color: #a14e39;
+}
+
+/* ========================================
+   VENTANA EMERGENTE
+======================================== */
+
+.fondo-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.ventana-modal {
+  background: #f5efe9;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.encabezado-modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.encabezado-modal h2 {
+  color: #392a23;
+  font-size: 21px;
+  margin: 0;
+}
+
+.cerrar-modal {
+  background: transparent;
+  border: none;
+  color: #8c7b6d;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Formulario */
+
+.campos-material {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.campo-material {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.campo-material label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #493126;
+}
+
+.campo-material input,
+.campo-material select,
+.campo-material textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ded6ce;
+  border-radius: 7px;
+  background: white;
+  color: #392a23;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.campo-material input:focus,
+.campo-material select:focus,
+.campo-material textarea:focus {
+  outline: 2px solid #704b38;
+}
+
+.campo-completo {
+  grid-column: 1 / -1;
+}
+
+/* Botones del formulario */
+
+.acciones-modal {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.acciones-modal button {
+  padding: 12px 18px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.boton-cancelar {
+  background: transparent;
+  color: #493126;
+  border: 1px solid #ded6ce;
+}
+
+.boton-guardar {
+  background: #704b38;
+  color: white;
+  border: none;
+}
+
+.boton-guardar:hover {
+  background: #593a2b;
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 650px) {
+  .encabezado-inventario {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .campos-material {
+    grid-template-columns: 1fr;
+  }
+
+  .ventana-modal {
+    padding: 18px;
+  }
+
+  .acciones-modal {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* ========================================
+   FILTROS DEL INVENTARIO
+======================================== */
+
+.filtros-inventario {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.filtros-inventario input,
+.filtros-inventario select {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  height: 45px;
+  padding: 10px 12px;
+  border: 1px solid #ded6ce;
+  border-radius: 7px;
+  background: #ffffff;
+  color: #493126;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.filtros-inventario input:focus,
+.filtros-inventario select:focus {
+  outline: 2px solid #704b38;
+  border-color: #704b38;
+}
+
+@media (max-width: 1100px) {
+  .filtros-inventario {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .filtros-inventario {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Botón para editar materiales */
+.boton-editar-material {
+  background: #ffffff;
+  color: #704b38;
+  border: 1px solid #d8c7b8;
+  border-radius: 6px;
+  padding: 9px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.boton-editar-material:hover {
+  background: #f3ebe3;
+  border-color: #704b38;
+}
+
+/* Información del stock en la ventana de edición */
+.aviso-stock-edicion {
+  padding: 12px 15px;
+  background: #f8f1e8;
+  border: 1px solid #e6d8c8;
+  border-radius: 8px;
+  color: #704b38;
+  line-height: 1.6;
+}
+
+/* Permitir desplazamiento horizontal en tablas pequeñas */
+.tabla-inventario {
+  overflow-x: auto;
+}
+
+
+/* Botones para desactivar y reactivar */
+.boton-estado-material {
+  background: transparent;
+  color: #a34d36;
+  border: none;
+  padding: 9px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.boton-estado-material:hover {
+  text-decoration: underline;
+}
+
+.boton-estado-material:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Etiqueta de material inactivo */
+.estado-stock.inactivo {
+  background: #e8e4df;
+  color: #625c56;
+}
+
+
+/* ==========================================
+   FORMULARIO REGISTRAR ENTRADA
+========================================== */
+
+.pagina-entrada {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.pagina-entrada h1 {
+  color: #4b2e20;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.pagina-entrada > p {
+  color: #75675e;
+  margin-bottom: 30px;
+}
+
+.formulario-entrada {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fffaf4;
+  padding: 30px;
+  border: 1px solid #e8d9c9;
+  border-radius: 14px;
+}
+
+.formulario-entrada label {
+  color: #4b2e20;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.formulario-entrada input,
+.formulario-entrada select,
+.formulario-entrada textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d8c7b5;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #3e2a20;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.formulario-entrada textarea {
+  resize: vertical;
+}
+
+.formulario-entrada input:focus,
+.formulario-entrada select:focus,
+.formulario-entrada textarea:focus {
+  outline: none;
+  border-color: #8b6046;
+  box-shadow: 0 0 0 3px rgba(139, 96, 70, 0.12);
+}
+
+.formulario-entrada button {
+  background: #79543e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.formulario-entrada button:hover {
+  background: #5d3d2b;
+}
+
+.formulario-entrada button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .formulario-entrada {
+    padding: 18px;
+  }
+
+  .pagina-entrada h1 {
+    font-size: 26px;
+  }
+}
+
+
+/* ==========================================
+   FORMULARIO REGISTRAR SALIDA
+========================================== */
+
+.pagina-salida {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.pagina-salida h1 {
+  color: #4b2e20;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.pagina-salida > p {
+  color: #75675e;
+  margin-bottom: 30px;
+}
+
+.formulario-salida {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fffaf4;
+  padding: 30px;
+  border: 1px solid #e8d9c9;
+  border-radius: 14px;
+}
+
+.formulario-salida label {
+  color: #4b2e20;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.formulario-salida input,
+.formulario-salida select,
+.formulario-salida textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d8c7b5;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #3e2a20;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.formulario-salida textarea {
+  resize: vertical;
+}
+
+.formulario-salida input:focus,
+.formulario-salida select:focus,
+.formulario-salida textarea:focus {
+  outline: none;
+  border-color: #8b6046;
+  box-shadow: 0 0 0 3px rgba(139, 96, 70, 0.12);
+}
+
+.formulario-salida button {
+  background: #79543e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.formulario-salida button:hover {
+  background: #5d3d2b;
+}
+
+.formulario-salida button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.formulario-salida p[role="alert"] {
+  color: #b42318;
+  font-weight: 500;
+}
+
+.formulario-salida p[role="status"] {
+  color: #287b57;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .formulario-salida {
+    padding: 18px;
+  }
+
+  .pagina-salida h1 {
+    font-size: 26px;
+  }
+}
+
+
+/* ==========================================
+   HISTORIAL DE MOVIMIENTOS
+========================================== */
+
+.pagina-movimientos {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pagina-movimientos h1 {
+  color: #4b2e20;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.pagina-movimientos > p {
+  color: #75675e;
+  margin-bottom: 25px;
+}
+
+/* BUSCADOR Y FILTROS */
+
+.filtros-movimientos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding: 22px;
+  background: #fffaf4;
+  border: 1px solid #e8d9c9;
+  border-radius: 12px;
+}
+
+.filtros-movimientos > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filtros-movimientos label {
+  display: block;
+  color: #4b2e20;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.filtros-movimientos input,
+.filtros-movimientos select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d8c7b5;
+  border-radius: 8px;
+  background: white;
+  color: #3e2a20;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.filtros-movimientos input:focus,
+.filtros-movimientos select:focus {
+  outline: none;
+  border-color: #8b6046;
+  box-shadow: 0 0 0 3px rgba(139, 96, 70, 0.12);
+}
+
+/* CONTADOR DE MOVIMIENTOS */
+
+.pagina-movimientos .total-movimientos {
+  color: #79543e;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* CONTENEDOR DE LA TABLA */
+
+.tabla-movimientos-contenedor {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e8d9c9;
+  border-radius: 12px;
+  background: white;
+}
+
+/* TABLA */
+
+.tabla-movimientos {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 750px;
+}
+
+.tabla-movimientos thead {
+  background: #79543e;
+  color: white;
+}
+
+.tabla-movimientos th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tabla-movimientos td {
+  padding: 15px 16px;
+  color: #4b2e20;
+  font-size: 14px;
+  border-bottom: 1px solid #eee3d8;
+}
+
+.tabla-movimientos tbody tr:nth-child(even) {
+  background: #fffaf4;
+}
+
+.tabla-movimientos tbody tr:hover {
+  background: #f5eadf;
+}
+
+.tabla-movimientos tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ETIQUETAS ENTRADA Y SALIDA */
+
+.tabla-movimientos .tipo-entrada {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #e4f3e8;
+  color: #287b57;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tabla-movimientos .tipo-salida {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #fde8e7;
+  color: #b42318;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* MENSAJES DE ERROR */
+
+.pagina-movimientos p[role="alert"] {
+  color: #b42318;
+  font-weight: 500;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 600px) {
+  .pagina-movimientos h1 {
+    font-size: 26px;
+  }
+
+  .filtros-movimientos {
+    flex-direction: column;
+    padding: 18px;
+  }
+
+  .filtros-movimientos > div {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .tabla-movimientos th,
+  .tabla-movimientos td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+
+/* ==========================================
+   MÓDULO DE COMPRAS Y REPOSICIÓN
+========================================== */
+
+.pagina-compras {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pagina-compras h1 {
+  color: #4b2e20;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.pagina-compras > p {
+  color: #75675e;
+  margin-bottom: 25px;
+}
+
+/* TARJETAS DE RESUMEN */
+
+.resumen-compras {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.tarjeta-compra {
+  background: #fffaf4;
+  border: 1px solid #e8d9c9;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.tarjeta-compra h3 {
+  color: #79543e;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 12px;
+}
+
+.tarjeta-compra h2 {
+  color: #4b2e20;
+  font-size: 34px;
+  margin: 0;
+}
+
+/* BUSCADOR */
+
+.filtros-compras {
+  background: #fffaf4;
+  border: 1px solid #e8d9c9;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.filtros-compras label {
+  display: block;
+  color: #4b2e20;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.filtros-compras input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d8c7b5;
+  border-radius: 8px;
+  background: white;
+  color: #3e2a20;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.filtros-compras input:focus {
+  outline: none;
+  border-color: #8b6046;
+  box-shadow: 0 0 0 3px rgba(139, 96, 70, 0.12);
+}
+
+/* TABLA DE COMPRAS */
+
+.tabla-compras-contenedor {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e8d9c9;
+  border-radius: 12px;
+  background: white;
+}
+
+.tabla-compras {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.tabla-compras thead {
+  background: #79543e;
+  color: white;
+}
+
+.tabla-compras th {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.tabla-compras td {
+  padding: 15px 16px;
+  color: #4b2e20;
+  font-size: 14px;
+  border-bottom: 1px solid #eee3d8;
+}
+
+.tabla-compras tbody tr:nth-child(even) {
+  background: #fffaf4;
+}
+
+.tabla-compras tbody tr:hover {
+  background: #f5eadf;
+}
+
+.tabla-compras tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabla-compras td strong {
+  color: #79543e;
+}
+
+/* ESTADOS DE REPOSICIÓN */
+
+.estado-bajo-stock {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #fff0d8;
+  color: #9a5b00;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.estado-agotado {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #fde8e7;
+  color: #b42318;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* MENSAJES */
+
+.mensaje-compras {
+  background: #fffaf4;
+  border: 1px solid #e8d9c9;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  color: #79543e;
+}
+
+.pagina-compras p[role="alert"] {
+  color: #b42318;
+  font-weight: 500;
+}
+
+.pagina-compras .nota-compras {
+  color: #75675e;
+  font-size: 13px;
+  margin-top: 18px;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 768px) {
+  .resumen-compras {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .tarjeta-compra {
+    padding: 18px;
+  }
+
+  .pagina-compras h1 {
+    font-size: 26px;
+  }
+
+  .filtros-compras {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tabla-compras th,
+  .tabla-compras td {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+
+
+/* ==========================================
+   INICIO - MATERIALES QUE NECESITAN ATENCIÓN
+========================================== */
+
+.seccion-atencion {
+  padding: 28px;
+}
+
+/* ENCABEZADO Y ENLACE VER INVENTARIO */
+
+.encabezado-atencion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.encabezado-atencion h2 {
+  color: #4b2e20;
+  font-size: 22px;
+  margin: 0;
+}
+
+.encabezado-atencion .enlace-inventario {
+  background: transparent;
+  border: none;
+  color: #79543e;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 6px;
+  white-space: nowrap;
+}
+
+.encabezado-atencion .enlace-inventario:hover {
+  color: #4b2e20;
+}
+
+/* LISTA DE MATERIALES */
+
+.lista-materiales-atencion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* TARJETAS INDIVIDUALES */
+
+.material-atencion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff8f3;
+  border: 1px solid #f0e1d5;
+  border-radius: 10px;
+  padding: 16px 18px;
+  transition: background 0.2s ease;
+}
+
+.material-atencion:hover {
+  background: #f8eee6;
+}
+
+/* INFORMACIÓN DEL MATERIAL */
+
+.informacion-material-atencion {
+  flex: 1;
+  min-width: 0;
+}
+
+.informacion-material-atencion h3 {
+  color: #4b2e20;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.informacion-material-atencion p {
+  color: #8a7568;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* ETIQUETA Y BOTÓN */
+
+.acciones-material-atencion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.etiqueta-stock-bajo {
+  display: inline-block;
+  padding: 7px 12px;
+  background: #f9e1d9;
+  color: #a84c35;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.acciones-material-atencion .boton-ver-material {
+  background: #fffaf6;
+  color: #79543e;
+  border: 1px solid #c9a58e;
+  border-radius: 7px;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.acciones-material-atencion .boton-ver-material:hover {
+  background: #79543e;
+  color: white;
+  border-color: #79543e;
+}
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 768px) {
+  .seccion-atencion {
+    padding: 20px;
+  }
+
+  .encabezado-atencion {
+    align-items: flex-start;
+  }
+
+  .encabezado-atencion h2 {
+    font-size: 19px;
+  }
+
+  .material-atencion {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .acciones-material-atencion {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .encabezado-atencion {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .encabezado-atencion .enlace-inventario {
+    padding-left: 0;
+  }
+}
+
+
+/* ==========================================
+   INICIO - PANEL DE DOS COLUMNAS
+========================================== */
+
+.panel-detalles-inicio {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+  margin-top: 24px;
+}
+
+.panel-detalles-inicio > .tarjeta-admin {
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* ==========================================
+   MOVIMIENTOS RECIENTES
+========================================== */
+
+.seccion-recientes {
+  padding: 28px;
+}
+
+.encabezado-recientes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.encabezado-recientes h2 {
+  color: #4b2e20;
+  font-size: 22px;
+  margin: 0;
+}
+
+.encabezado-recientes .enlace-movimientos {
+  background: transparent;
+  border: none;
+  color: #79543e;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 6px;
+  white-space: nowrap;
+}
+
+.encabezado-recientes .enlace-movimientos:hover {
+  color: #4b2e20;
+}
+
+/* LISTA DE MOVIMIENTOS */
+
+.lista-movimientos-recientes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.movimiento-reciente {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 12px;
+  background: #fff8f3;
+  border: 1px solid #f0e1d5;
+  border-radius: 10px;
+}
+
+.informacion-movimiento-reciente {
+  min-width: 0;
+}
+
+.informacion-movimiento-reciente h3 {
+  color: #4b2e20;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.informacion-movimiento-reciente p {
+  color: #8a7568;
+  font-size: 12px;
+  margin: 0;
+}
+
+.movimiento-positivo {
+  color: #287b57;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.movimiento-negativo {
+  color: #b42318;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.seccion-recientes p[role="alert"] {
+  color: #b42318;
+}
+
+/* ==========================================
+   ADAPTACIÓN A PANTALLAS PEQUEÑAS
+========================================== */
+
+@media (max-width: 1100px) {
+  .panel-detalles-inicio {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .seccion-recientes {
+    padding: 20px;
+  }
+
+  .encabezado-recientes {
+    flex-wrap: wrap;
+  }
+
+  .encabezado-recientes h2 {
+    font-size: 19px;
+  }
+
+  .movimiento-reciente {
+    flex-wrap: wrap;
+  }
+}
+
