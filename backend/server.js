@@ -23,12 +23,15 @@ const supabase = createClient(supabaseUrl, supabaseKey, {
 });
 
 // Permitir solicitudes desde React
+
 app.use(cors({
   origin: [
     "http://localhost:5173",
-    "http://localhost:5174"
+    "http://localhost:5174",
+    "https://sistema-inventario-muebleria-v2.vercel.app"
   ]
 }));
+
 
 app.use(express.json({ limit: "10kb" }));
 
