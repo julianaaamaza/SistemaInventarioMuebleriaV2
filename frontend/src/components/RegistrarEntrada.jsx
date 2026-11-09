@@ -12,7 +12,7 @@ function RegistrarEntrada({ token, onEntradaRegistrada }) {
     const cargarMateriales = async () => {
       try {
         const respuesta = await fetch(
-          'http://localhost:3000/api/materiales',
+          'https://inventario-muebleria-backend.onrender.com/api/materiales',
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -62,7 +62,7 @@ function RegistrarEntrada({ token, onEntradaRegistrada }) {
 
     try {
       const respuesta = await fetch(
-        'http://localhost:3000/api/movimientos/entrada',
+        'https://inventario-muebleria-backend.onrender.com/api/movimientos/entrada',
         {
           method: 'POST',
           headers: {

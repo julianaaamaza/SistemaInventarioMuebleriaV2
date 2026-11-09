@@ -16,7 +16,7 @@ function HistorialMovimientos({ token }) {
 
       try {
         const respuesta = await fetch(
-          'http://localhost:3000/api/movimientos',
+          'https://inventario-muebleria-backend.onrender.com/api/movimientos',
           {
             headers: {
               Authorization: `Bearer ${token}`

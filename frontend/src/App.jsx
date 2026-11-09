@@ -119,7 +119,7 @@ const [errorMovimientos, setErrorMovimientos] = useState('')
 
     try {
       const respuesta = await fetch(
-        'http://localhost:3000/api/auth/perfil',
+        'https://inventario-muebleria-backend.onrender.com/api/auth/perfil',
         {
           headers: {
             Authorization: `Bearer ${tokenRecibido}`
@@ -167,7 +167,7 @@ const [errorMovimientos, setErrorMovimientos] = useState('')
 
       try {
         const respuesta = await fetch(
-          'http://localhost:3000/api/materiales',
+          'https://inventario-muebleria-backend.onrender.com/api/materiales',
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -236,7 +236,7 @@ const [errorMovimientos, setErrorMovimientos] = useState('')
 
       try {
         const respuesta = await fetch(
-          'http://localhost:3000/api/movimientos',
+          'https://inventario-muebleria-backend.onrender.com/api/movimientos',
           {
             headers: {
               Authorization: `Bearer ${token}`

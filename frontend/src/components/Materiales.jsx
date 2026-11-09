@@ -31,7 +31,7 @@ const [orden, setOrden] = useState('nombre')
   // Obtener materiales desde el backend
   const obtenerMateriales = async (signal) => {
     const respuesta = await fetch(
-      'http://localhost:3000/api/materiales',
+      'https://inventario-muebleria-backend.onrender.com/api/materiales',
       {
         headers: {
           Authorization: `Bearer ${token}`
@@ -185,8 +185,8 @@ const [orden, setOrden] = useState('nombre')
     try {
       const respuesta = await fetch(
         editando
-          ? `http://localhost:3000/api/materiales/${materialEditando.id}`
-          : 'http://localhost:3000/api/materiales',
+          ? `https://inventario-muebleria-backend.onrender.com/api/materiales/${materialEditando.id}`
+          : 'https://inventario-muebleria-backend.onrender.com/api/materiales',
         {
           method: editando ? 'PUT' : 'POST',
           headers: {
@@ -254,7 +254,7 @@ const [orden, setOrden] = useState('nombre')
 
     try {
       const respuesta = await fetch(
-        `http://localhost:3000/api/materiales/${material.id}/estado`,
+        `https://inventario-muebleria-backend.onrender.com/api/materiales/${material.id}/estado`,
         {
           method: 'PATCH',
           headers: {

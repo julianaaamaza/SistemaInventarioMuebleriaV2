@@ -14,7 +14,7 @@ function Login({ onLoginExitoso }) {
     try {
       // Enviar las credenciales al backend
       const respuesta = await fetch(
-        'http://localhost:3000/api/auth/login',
+        'https://inventario-muebleria-backend.onrender.com/api/auth/login',
         {
           method: 'POST',
           headers: {

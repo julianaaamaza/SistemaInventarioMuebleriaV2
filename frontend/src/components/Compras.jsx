@@ -15,7 +15,7 @@ function Compras({ token }) {
 
       try {
         const respuesta = await fetch(
-          'http://localhost:3000/api/compras/pendientes',
+          'https://inventario-muebleria-backend.onrender.com/api/compras/pendientes',
           {
             headers: {
               Authorization: `Bearer ${token}`
